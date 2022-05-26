@@ -15,11 +15,11 @@ jobs:
           java-version: '11'
           
       - name: Maven Package
-        run: |
+      - run: |
           cd zap-trial
           mvn --batch-mode --update-snapshots package
           mkdir staging && cp target/*.jar staging
-        uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
           name: service-artifact
           path: staging
