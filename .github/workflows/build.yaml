@@ -18,7 +18,7 @@ jobs:
       - run: |
           cd zap-trial
           mvn --batch-mode --update-snapshots package
-      -	run: mkdir staging && cp target/*.jar staging
+          mkdir staging && cp target/*.jar staging
 		uses: actions/upload-artifact@v3
 		with:
           name: service-artifact
