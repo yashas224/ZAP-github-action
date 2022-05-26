@@ -15,9 +15,7 @@ jobs:
           java-version: 8
           
       - name: Maven Package
-        run: mvn -B clean package -DskipTests
-      - name: Maven Verify
-        run: mvn -B clean verify -Pintegration-test
+        run: mvn --batch-mode --update-snapshots package
 		run: mkdir staging && cp target/*.jar staging
 		uses: actions/upload-artifact@v3
 		with:
