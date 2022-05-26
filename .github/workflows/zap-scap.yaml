@@ -19,7 +19,7 @@ jobs:
         with:
             url: 'http://localhost:8080/v2/api-docs'
             responseCode: '200'
-            timeout: 30000
+            timeout: 300000
             interval: 50000
       - name: curl swagger endpoints
         run: |
