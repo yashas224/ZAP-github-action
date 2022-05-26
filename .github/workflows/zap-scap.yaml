@@ -13,13 +13,15 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '11'
-      - name: set up curl
-        uses: 4thel00z/curl-github-action@v0.2.0
+
       - name: Maven Package
         run: |
           cd zap-trial
           mvn clean install -DskipTests
           mvn spring-boot:run
+      - name: set up curl
+        uses: 4thel00z/curl-github-action@v0.2.0
+        run: |
           curl http://localhost:8080/v2/api-docs
           curl http://localhost:8080/v2/api-docs -o myfile.txt          
       - name: save file 
