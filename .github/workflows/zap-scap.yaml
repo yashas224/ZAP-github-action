@@ -20,12 +20,3 @@ jobs:
           cd zap-trial
           mvn clean install -DskipTests
           mvn spring-boot:run
-      - name: curl swagger endpoints
-        run: |
-          curl http://localhost:8080/v2/api-docs
-          curl http://localhost:8080/v2/api-docs -o myfile.txt          
-      - name: save file 
-        uses: actions/upload-artifact@v3
-        with:
-          name: file
-          path: zap-trial/myfile.txt
