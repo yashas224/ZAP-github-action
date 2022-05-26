@@ -1,5 +1,4 @@
 FROM maven:3.8.2-jdk-8
-WORKDIR /zap-trial
-COPY . .
-RUN mvn clean install
+COPY ./zap-trial .
+mvn package -Dmaven.test.skip
 CMD mvn spring-boot:run
