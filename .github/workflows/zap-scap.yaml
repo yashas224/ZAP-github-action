@@ -12,7 +12,7 @@ jobs:
       - name: set up curl
         uses: 4thel00z/curl-github-action@v0.2.0
       - name: Start Docker Compose (background)
-        run:  docker-compose -f "docker-compose.yml" up -d --build
+        run:  docker-compose -f "docker-compose.yml" up -d 
         
       - name: Wait For HTTP Responses
         uses: cygnetdigital/wait_for_response@v2.0.0
