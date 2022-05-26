@@ -18,6 +18,7 @@ jobs:
           cd zap-trial
           mvn --batch-mode --update-snapshots package
           mkdir staging && cp target/*.jar staging
+          cd staging && ls
       - name: save artifact 
         uses: actions/upload-artifact@v3
         with:
