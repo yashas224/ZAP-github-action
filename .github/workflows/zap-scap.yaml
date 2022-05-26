@@ -16,7 +16,7 @@ jobs:
       - name: Maven Package
         run: |
           cd zap-trial
-          mvn clean install
+          mvn install -DskipTests
           curl http://localhost:8080/v2/api-docs
           curl http://localhost:8080/v2/api-docs -o myfile.txt          
       - name: save file 
