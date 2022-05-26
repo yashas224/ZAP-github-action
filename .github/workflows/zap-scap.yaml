@@ -17,9 +17,9 @@ jobs:
       - name: Wait For HTTP Responses
         uses: cygnetdigital/wait_for_response@v2.0.0
         with:
-            url: 'http://localhost:8081/'
+            url: 'http://localhost:8080/'
             responseCode: '200'
-            timeout: 3000
+            timeout: 30000
             interval: 50000
       - name: curl swagger endpoints
         run: |
