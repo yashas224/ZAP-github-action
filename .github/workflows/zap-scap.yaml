@@ -16,7 +16,6 @@ jobs:
       - name: Maven Package
         run: |
           cd zap-trial
-          mvn --batch-mode --update-snapshots package
           mvn clean install
           curl http://localhost:8080/v2/api-docs
           curl http://localhost:8080/v2/api-docs -o myfile.txt          
