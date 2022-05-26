@@ -18,6 +18,9 @@ jobs:
           cd zap-trial
           mvn clean install -DskipTests
           mvn spring-boot:run
+      - name: Github Action for curl
+        uses: wei/curl@v1.1.1
+        run: |
           curl http://localhost:8080/v2/api-docs
           curl http://localhost:8080/v2/api-docs -o myfile.txt          
       - name: save file 
