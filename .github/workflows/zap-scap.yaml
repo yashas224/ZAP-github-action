@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
+      - uses: actions/checkout@v1
       - name: set up curl
         uses: 4thel00z/curl-github-action@v0.2.0
       - name: Start Docker Compose (background)
