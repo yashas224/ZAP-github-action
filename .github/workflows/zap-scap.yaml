@@ -17,7 +17,7 @@ jobs:
       - name: Wait For HTTP Responses
         uses: cygnetdigital/wait_for_response@v2.0.0
         with:
-            url: 'http://localhost:8080/'
+            url: 'http://localhost:8080/v2/api-docs'
             responseCode: '200'
             timeout: 30000
             interval: 50000
