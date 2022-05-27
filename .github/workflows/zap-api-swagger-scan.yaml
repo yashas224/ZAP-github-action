@@ -21,14 +21,6 @@ jobs:
             responseCode: '200'
             timeout: 300000
             interval: 50000
-      - name: curl swagger endpoints
-        run: |
-          curl http://localhost:8080/v2/api-docs -o myfile.txt          
-      - name: save file 
-        uses: actions/upload-artifact@v3
-        with:
-          name: file
-          path: myfile.txt
       - name: ZAP Scan for service endpoints
         uses: zaproxy/action-api-scan@v0.1.1
         with:
