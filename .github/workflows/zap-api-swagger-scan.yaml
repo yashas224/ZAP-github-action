@@ -1,4 +1,4 @@
-name: Swagger generation
+name: ZAP API SCAN
 on: push
 
 jobs:
@@ -29,3 +29,8 @@ jobs:
         with:
           name: file
           path: myfile.txt
+      - name: ZAP Scan for service endpoints
+        uses: zaproxy/action-api-scan@v0.1.1
+        with:
+          format: openapi
+          target: 'http://localhost:8080/v2/api-docs'
